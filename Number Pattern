@@ -1,0 +1,20 @@
+import java.util.*;
+public class NumberPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number to be printed: ");
+        int number = scanner.nextInt();
+        System.out.print("Max Number of times printed: ");
+        int maxTimes = scanner.nextInt();
+        for (int i = 1; i <= maxTimes * 2 - 1; i++) {
+            int currentCount = (i <= maxTimes) ? i : maxTimes * 2 - i;
+            for (int j = 1; j <= currentCount; j++) {
+                System.out.print(number);
+            }
+
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
