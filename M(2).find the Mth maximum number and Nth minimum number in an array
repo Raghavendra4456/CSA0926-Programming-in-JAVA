@@ -1,0 +1,21 @@
+def find_mth_max_and_nth_min(arr, m, n):
+    arr.sort()
+    mth_max = arr[-m]
+    nth_min = arr[n - 1]
+    return mth_max, nth_min
+
+if __name__ == "__main__":
+    arr = [14, 16, 87, 36, 25, 89, 34]
+    m = 1
+    n = 3
+
+    mth_max, nth_min = find_mth_max_and_nth_min(arr, m, n)
+
+    print(f"{m}st Maximum Number = {mth_max}")
+    print(f"{n}rd Minimum Number = {nth_min}")
+
+    sum_result = mth_max + nth_min
+    difference_result = mth_max - nth_min
+
+    print("Sum =", sum_result)
+    print("Difference =", difference_result)
