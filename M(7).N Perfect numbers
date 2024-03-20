@@ -1,0 +1,19 @@
+def is_perfect_number(num):
+    divisors_sum = 1
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            divisors_sum += i
+            if i != num // i:
+                divisors_sum += num // i
+    return divisors_sum == num
+def first_n_perfect_numbers(n):
+    perfect_numbers = []
+    num = 6  
+    while len(perfect_numbers) < n:
+        if is_perfect_number(num):
+            perfect_numbers.append(num)
+        num += 1
+    return perfect_numbers
+N = int(input("N = "))
+perfect_numbers = first_n_perfect_numbers(N)
+print("First", N, "perfect numbers are:", ', '.join(map(str, perfect_numbers)))
