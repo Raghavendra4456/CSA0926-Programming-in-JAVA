@@ -1,0 +1,21 @@
+def calculate_grade(aggregate):
+    if aggregate > 75:
+        return "Distinction"
+    elif aggregate >= 60:
+        return "First Division"
+    elif aggregate >= 50:
+        return "Second Division"
+    elif aggregate >= 40:
+        return "Third Division"
+    else:
+        return "Fail"
+marks_python = float(input("Enter the marks in Python: "))
+marks_c = float(input("Enter the marks in C programming: "))
+marks_math = float(input("Enter the marks in Mathematics: "))
+marks_physics = float(input("Enter the marks in Physics: "))
+total_marks = marks_python + marks_c + marks_math + marks_physics
+aggregate = total_marks / 4
+print("Total =", total_marks)
+print("Aggregate =", aggregate)
+grade = calculate_grade(aggregate)
+print("Grade obtained by the student:", grade)
